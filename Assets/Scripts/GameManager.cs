@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         collectedObject.gameObject.AddComponent<Rigidbody>().isKinematic = true;
         collectedObject.gameObject.AddComponent<Stack>(); // Toplanan objeler Stack Componenti eklernir
         collectedObject.gameObject.GetComponent<Collider>().isTrigger = true; // Toplanan objelerin isTrigger aktif eder(Di?er objeler temas edince toplama yapmas? i?in)
-        collectedObject.tag = gameObject.tag;
+        collectedObject.tag = "Collected";
         Collected.Add(collectedObject.transform); // Toplanan objeleri Collected listesine ekler
         AudioController.audioControllerInstance.Play("MoneySound");
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fruit
   - Fail
+  - Collected
   layers:
   - Default
   - TransparentFX

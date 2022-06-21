@@ -21,13 +21,13 @@ public class Stack : MonoBehaviour
         }
         if (other.CompareTag("Fail"))
         {
-            // Toplad??? t?m objeler yok olur
+            // Toplanan tüm objeler yok olur
             GameManager.gamemanagerInstance.Fail(other.gameObject);
             Debug.Log("Fail");
         }
         if (other.CompareTag("Finish"))
         {
-            // Finish i?inden ge?en obje odaye yerle?tirilir
+            
         }
     }
 }

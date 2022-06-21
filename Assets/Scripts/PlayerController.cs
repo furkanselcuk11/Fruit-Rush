@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
 
     [Header("Player Controller")]
-    [SerializeField] private float speed = 30f;    // Player hareket hýzý
-    [SerializeField] private float horizontalspeed = 10f; // Player yön hareket hýzý
+    [SerializeField] private float speed = 5f;    // Player hareket hýzý
+    [SerializeField] private float horizontalspeed = 5f; // Player yön hareket hýzý
     [SerializeField] private float defaultSwipe = 4f;    // Player default kaydýrma mesafesi
 
 
