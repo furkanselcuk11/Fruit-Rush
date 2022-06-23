@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
                 var firstItem = Collected.ElementAt(i - 1);
                 var sectItem = Collected.ElementAt(i);
 
-                // Stack (Toplama) i?lemi sonras? toplanan objelerin  s?ral? ?ekilde gidi?ini ayarlar
+                // Stack (Toplama) iþlemi sonrasý toplanan objelerin  sýralý þekilde gidiþini ve üstüne eklemesini ayarlar
                 sectItem.position = new Vector3(Mathf.Lerp(sectItem.position.x, firstItem.position.x, swipeSpeed * Time.fixedDeltaTime),
                     Mathf.Lerp(sectItem.position.y, firstItem.position.y + diffBetweenItems, swipeSpeed * Time.fixedDeltaTime),
                     firstItem.position.z);
@@ -78,18 +78,24 @@ public class GameManager : MonoBehaviour
         {
             int totalCollect = Collected.Count;
             for (int i = 0; i < totalCollect - 1; i++)
-            {
+            {                
+                // Toplanan objeler engellere temas ederse ortaya saçýlýr
+                Collected.ElementAt(Collected.Count - 1).gameObject.transform.GetComponent<Rigidbody>().isKinematic=false;
+                Collected.ElementAt(Collected.Count - 1).gameObject.transform.GetComponent<BoxCollider>().isTrigger=false;
+                Collected.ElementAt(Collected.Count - 1).gameObject.transform.GetComponent<Rigidbody>().AddForce(transform.forward*500*Time.deltaTime,ForceMode.Impulse);
                 // totalCollect-1 olmas? player objesinin i?inde olmas?ndan ve silmemesi i?in
-                Destroy(Collected.ElementAt(Collected.Count - 1).gameObject);   // T?m objeler silinir 
+                Destroy((Collected.ElementAt(Collected.Count - 1).gameObject),2);   // Tüm objeler silinir 
                 Collected.RemoveAt(Collected.Count - 1); // Silinnen objeler Collected listesinden at?l?r               
             }
         }
+        failGate.GetComponent<BoxCollider>().isTrigger = true;
         failGate.GetComponent<Collider>().enabled = false; // Fail(testere) kapýsýndan geçdiðimizde kapýnýn mesh collider kapat     
         AudioController.audioControllerInstance.Play("FailSound");
-        // Eðer Engellere (Obstacles) çarpýldýysa karakter X ekseninde 0 noktasýna gelir
+        // Eðer Engellere (Obstacles) çarpýldýysa karakter Z ekseninde geri tepme yapýlýr
         startTheGame = false;   // Tekrar ekrana dokunan kadar hareket etmez
-        Player.transform.position = new Vector3(Mathf.Lerp(0,Player.transform.position.x,Time.deltaTime),
-            Player.transform.position.y, Player.transform.position.z);
+        Player.transform.position = new Vector3(Player.transform.position.x,
+            Player.transform.position.y,
+            Mathf.Lerp(Player.transform.position.z-3f, Player.transform.position.z,Time.deltaTime));
     }
     public void Restart()
     {

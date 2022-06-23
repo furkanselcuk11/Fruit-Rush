@@ -23,7 +23,6 @@ public class Stack : MonoBehaviour
         {
             // Toplanan tüm objeler yok olur
             GameManager.gamemanagerInstance.Fail(other.gameObject);
-            Debug.Log("Fail");
         }
         if (other.CompareTag("Finish"))
         {
