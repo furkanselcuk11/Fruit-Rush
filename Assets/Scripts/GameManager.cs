@@ -46,20 +46,6 @@ public class GameManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //if (Collected.Count > 1)
-        //{
-        //    for (int i = 1; i < Collected.Count; i++)
-        //    {
-        //        var firstItem = Collected.ElementAt(i - 1);
-        //        var sectItem = Collected.ElementAt(i);
-
-        //        // Stack (Toplama) i?lemi sonras? toplanan objelerin  s?ral? ?ekilde gidi?ini ayarlar
-        //        sectItem.position = new Vector3(Mathf.Lerp(sectItem.position.x, firstItem.position.x, swipeSpeed * Time.deltaTime),
-        //            sectItem.position.y,
-        //            Mathf.Lerp(sectItem.position.z, firstItem.position.z + diffBetweenItems, swipeSpeed * Time.deltaTime));
-        //    }
-        //}
-
         if (Collected.Count > 1)
         {
             for (int i = 1; i < Collected.Count; i++)
@@ -99,8 +85,11 @@ public class GameManager : MonoBehaviour
                 Collected.RemoveAt(Collected.Count - 1); // Silinnen objeler Collected listesinden at?l?r               
             }
         }
-        failGate.GetComponent<Collider>().enabled = false; // Fail(testere) kap?s?ndan ge?di?imizde kap?n?n mesh collider kapat     
+        failGate.GetComponent<Collider>().enabled = false; // Fail(testere) kapýsýndan geçdiðimizde kapýnýn mesh collider kapat     
         AudioController.audioControllerInstance.Play("FailSound");
+        startTheGame = false;
+        Player.transform.position = new Vector3(Mathf.Lerp(0,Player.transform.position.x,Time.deltaTime),
+            Player.transform.position.y, Player.transform.position.z);
     }
     public void Restart()
     {

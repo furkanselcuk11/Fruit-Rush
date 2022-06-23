@@ -1146,6 +1146,7 @@ GameObject:
   - component: {fileID: 918471328475942641}
   - component: {fileID: 918471328473147693}
   - component: {fileID: 918471328473972931}
+  - component: {fileID: 918471328476233596}
   m_Layer: 0
   m_Name: Shrub
   m_TagString: Fail
@@ -1153,6 +1154,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &918471328476233596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918471328476233595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.150414, y: 1.8667208, z: 1.7351848}
+  m_Center: {x: 0.088832766, y: 0.09100515, z: 0.049468815}
 --- !u!1 &1089556618396595963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3579,6 +3593,7 @@ GameObject:
   - component: {fileID: 7212899980749675450}
   - component: {fileID: 7212899980753006134}
   - component: {fileID: 7212899980752027286}
+  - component: {fileID: 7212899980753006135}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Fail
@@ -3636,6 +3651,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7212899980749893092}
   m_Mesh: {fileID: 4300000, guid: f95d237e2f8b70740a94ce53107719d4, type: 3}
+--- !u!65 &7212899980753006135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7212899980749893092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.579882, y: 1.9819143, z: 2.115197}
+  m_Center: {x: 0.09312928, y: 0.12119162, z: 0.026857257}
 --- !u!4 &7272914852397694301
 Transform:
   m_ObjectHideFlags: 0
@@ -4572,6 +4600,7 @@ GameObject:
   - component: {fileID: 9056027020291797904}
   - component: {fileID: 9056027020292550300}
   - component: {fileID: 9056027020293663286}
+  - component: {fileID: 9056027020293663287}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Fail
@@ -4587,7 +4616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9056027020291535164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.61, y: 0.3, z: 11.61}
+  m_LocalPosition: {x: -2.43, y: 0.3, z: 18.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4644,6 +4673,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9056027020293663287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056027020291535164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1609292, y: 3.8417263, z: 0.5743039}
+  m_Center: {x: -0.01973766, y: 1.6721778, z: -0.012388706}
 --- !u!1 &9114632513108467009
 GameObject:
   m_ObjectHideFlags: 0
