@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public bool startTheGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
+    [SerializeField] private GameObject TapToPlay;
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
@@ -41,7 +42,14 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if (startTheGame)
+        {
+            TapToPlay.SetActive(false);
+        }
+        else
+        {
+            TapToPlay.SetActive(true);
+        }
     }
     private void FixedUpdate()
     {
