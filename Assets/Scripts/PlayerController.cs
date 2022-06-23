@@ -72,7 +72,10 @@ public class PlayerController : MonoBehaviour
         }
         if (other.CompareTag("Fail"))
         {
-            GameManager.gamemanagerInstance.Restart();
+            if (GameManager.gamemanagerInstance.Collected.Count<2)
+            {
+                GameManager.gamemanagerInstance.Restart();
+            }
         }
         if (other.CompareTag("Finish"))
         {

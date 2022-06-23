@@ -472,7 +472,7 @@ MonoBehaviour:
   isFinish: 0
   Player: {fileID: 3486388868180691824}
   CollectionBox: {fileID: 1172407877}
-  swipeSpeed: 15
+  swipeSpeed: 25
   diffBetweenItems: 0.3
   Collected: []
 --- !u!4 &1042041306
@@ -548,7 +548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172407877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0.8}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0.7}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:

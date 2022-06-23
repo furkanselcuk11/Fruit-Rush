@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        //Collected.Add(Player.transform);    // Player objesini Toplanan Objeler listesine ekler
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         //money = 0;
         //moneyTxt.text = money.ToString();
@@ -87,7 +86,8 @@ public class GameManager : MonoBehaviour
         }
         failGate.GetComponent<Collider>().enabled = false; // Fail(testere) kapýsýndan geçdiðimizde kapýnýn mesh collider kapat     
         AudioController.audioControllerInstance.Play("FailSound");
-        startTheGame = false;
+        // Eðer Engellere (Obstacles) çarpýldýysa karakter X ekseninde 0 noktasýna gelir
+        startTheGame = false;   // Tekrar ekrana dokunan kadar hareket etmez
         Player.transform.position = new Vector3(Mathf.Lerp(0,Player.transform.position.x,Time.deltaTime),
             Player.transform.position.y, Player.transform.position.z);
     }
