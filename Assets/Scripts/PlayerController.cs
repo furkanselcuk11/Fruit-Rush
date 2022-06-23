@@ -25,12 +25,14 @@ public class PlayerController : MonoBehaviour
         {
             // Eðer StartGame true ve isFinish false ise hareket et
             transform.Translate(0, 0, speed * Time.fixedDeltaTime); // Karakter speed deðeri hýzýdna ileri hareket eder
+            GameManager.gamemanagerInstance.CollectionBox.SetActive(true);
             anim.SetBool("isRunning", true);    // Koþma animasyonu çalýþýr
             MoveInput();    // Player hareket kontrolü çalýþtýr
         }
         else
         {
             // Eðer StartGame False ise  hareket etmez
+            GameManager.gamemanagerInstance.CollectionBox.SetActive(false);
             anim.SetBool("isRunning", false);   // Koþma animasyonu durur ve default olarak bekleme animsayonu çalýþýr
         }
     }

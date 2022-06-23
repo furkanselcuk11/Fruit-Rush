@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
+    public GameObject CollectionBox;
     [SerializeField] private float swipeSpeed, diffBetweenItems;    // Toplana objelerin yana kayma h?z? ve objeler aras? mesafesi
     [Space]
     [Header("Collected Controller")]
@@ -34,7 +35,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        Collected.Add(Player.transform);    // Player objesini Toplanan Objeler listesine ekler
+        //Collected.Add(Player.transform);    // Player objesini Toplanan Objeler listesine ekler
+        Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         //money = 0;
         //moneyTxt.text = money.ToString();
     }
@@ -44,6 +46,20 @@ public class GameManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //if (Collected.Count > 1)
+        //{
+        //    for (int i = 1; i < Collected.Count; i++)
+        //    {
+        //        var firstItem = Collected.ElementAt(i - 1);
+        //        var sectItem = Collected.ElementAt(i);
+
+        //        // Stack (Toplama) i?lemi sonras? toplanan objelerin  s?ral? ?ekilde gidi?ini ayarlar
+        //        sectItem.position = new Vector3(Mathf.Lerp(sectItem.position.x, firstItem.position.x, swipeSpeed * Time.deltaTime),
+        //            sectItem.position.y,
+        //            Mathf.Lerp(sectItem.position.z, firstItem.position.z + diffBetweenItems, swipeSpeed * Time.deltaTime));
+        //    }
+        //}
+
         if (Collected.Count > 1)
         {
             for (int i = 1; i < Collected.Count; i++)
@@ -52,9 +68,9 @@ public class GameManager : MonoBehaviour
                 var sectItem = Collected.ElementAt(i);
 
                 // Stack (Toplama) i?lemi sonras? toplanan objelerin  s?ral? ?ekilde gidi?ini ayarlar
-                sectItem.position = new Vector3(Mathf.Lerp(sectItem.position.x, firstItem.position.x, swipeSpeed * Time.deltaTime),
-                    sectItem.position.y,
-                    Mathf.Lerp(sectItem.position.z, firstItem.position.z + diffBetweenItems, swipeSpeed * Time.deltaTime));
+                sectItem.position = new Vector3(Mathf.Lerp(sectItem.position.x, firstItem.position.x, swipeSpeed * Time.fixedDeltaTime),
+                    Mathf.Lerp(sectItem.position.y, firstItem.position.y + diffBetweenItems, swipeSpeed * Time.fixedDeltaTime),
+                    firstItem.position.z);
             }
         }
     }
