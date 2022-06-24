@@ -6,9 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Building Type", menuName = "BulidingSO")]
 public class BuildingSO : ScriptableObject
 {
-    [SerializeField] private int _currentValue;
-    [SerializeField] private int _maxValue;
-    [SerializeField] private int _moneyMaking;
+    [SerializeField] private int _currentValue; // Toplanan meyve sayýsý
+    [SerializeField] private int _maxValue; // Max toplanmasý gereken meyve sayýsý
+    [SerializeField] private int _moneyMaking;  // Para üretme miktarý
     [SerializeField] private bool _locked=true;
     [SerializeField] private Color _lockedColor = Color.red;
     [SerializeField] private Color _unlockedColor = Color.green;
