@@ -430,6 +430,18 @@ MonoBehaviour:
     volume: 1
     pitch: 1.5
     loop: 0
+  - source: {fileID: 0}
+    name: BuildingSound
+    clip: {fileID: 8300000, guid: 5090846020de1274694327a9e592b6b2, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+  - source: {fileID: 0}
+    name: BuildingOpenedSound
+    clip: {fileID: 8300000, guid: d13d0d7de831e4342856858be441f2e8, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
 --- !u!4 &387319219
 Transform:
   m_ObjectHideFlags: 0

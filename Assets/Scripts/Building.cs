@@ -15,7 +15,8 @@ public class Building : MonoBehaviour
     {
         if (!buildingType.locked)
         {
-            lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;
+            lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;    
+            // Para üretme
         }
     }
     private void OnTriggerStay(Collider other)
@@ -27,8 +28,10 @@ public class Building : MonoBehaviour
             {
                 basketType.totalFruit--;
                 buildingType.currentValue++;
+                AudioController.audioControllerInstance.Play("BuildingSound");
                 if (buildingType.currentValue == buildingType.maxValue)
                 {
+                    AudioController.audioControllerInstance.Play("BuildingOpenedSound");
                     buildingType.locked = false;
                 }
             }
