@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Building : MonoBehaviour
 {
     [SerializeField] private BuildingSO buildingType = null;    // Scriptable Objects eriþir  
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir  
     [SerializeField] private GameObject lockedPlane;
+    [SerializeField] private TextMeshPro buildingText;
     void Start()
     {
         lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.lockedColor;
+        buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();
     }    
     void Update()
     {
@@ -28,6 +31,7 @@ public class Building : MonoBehaviour
             {
                 basketType.totalFruit--;    // Toplanan meyve sayýsý azalt
                 buildingType.currentValue++;    // Binanýn toplanan meyve sayýsýný arttýr
+                buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();
                 AudioController.audioControllerInstance.Play("BuildingSound");
                 if (buildingType.currentValue == buildingType.maxValue)
                 {
