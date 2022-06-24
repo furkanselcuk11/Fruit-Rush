@@ -8,6 +8,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gamemanagerInstance;
+    [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir 
 
     [HideInInspector] public bool startTheGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
+        basketType.totalFruit = 0;
         //money = 0;
         //moneyTxt.text = money.ToString();
     }
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
         collectedObject.tag = "Collected";
         Collected.Add(collectedObject.transform); // Toplanan objeleri Collected listesine ekler
         AudioController.audioControllerInstance.Play("MoneySound");
+        basketType.totalFruit++;
     }
     public void Fail(GameObject failGate)
     {
@@ -93,7 +96,8 @@ public class GameManager : MonoBehaviour
                 Collected.ElementAt(Collected.Count - 1).gameObject.transform.GetComponent<Rigidbody>().AddForce(transform.forward*500*Time.deltaTime,ForceMode.Impulse);
                 // totalCollect-1 olmas? player objesinin i?inde olmas?ndan ve silmemesi i?in
                 Destroy((Collected.ElementAt(Collected.Count - 1).gameObject),2);   // Tüm objeler silinir 
-                Collected.RemoveAt(Collected.Count - 1); // Silinnen objeler Collected listesinden at?l?r               
+                Collected.RemoveAt(Collected.Count - 1); // Silinnen objeler Collected listesinden at?l?r
+                basketType.totalFruit--;
             }
         }
         failGate.GetComponent<BoxCollider>().isTrigger = true;
