@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: BasketData
   m_EditorClassIdentifier: 
   _totalFruit: 0
+  _minFruit: 0
+  _fruitPrice: 0.1
+  _priceLevel: 1

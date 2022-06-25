@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [Header("Game UI Controller")]
     [SerializeField] private GameObject GameStartPanel;
     [SerializeField] private GameObject GameRunTimePanel;
+    [SerializeField] private GameObject GameFinishPanel;
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
@@ -25,12 +26,10 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Collected Controller")]
     public List<Transform> Collected = new List<Transform>();   // Toplanan objelerin listesi
-    //[Space]
-    //[Header("Score Controller")]
-    //public TextMeshProUGUI totalMoneyTxt;
-    //public TextMeshProUGUI moneyTxt;
-    //public int totalMoney;
-    //private int money;
+    [Space]
+    [Header("Score Controller")]
+    public TextMeshProUGUI totalMoneyTxt;
+    public TextMeshProUGUI currentMoneyTxt;
 
     private void Awake()
     {
@@ -44,7 +43,8 @@ public class GameManager : MonoBehaviour
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         basketType.totalFruit = basketType.minFruit;
         moneyType.currentMoney = moneyType.minMoney;
-        //moneyTxt.text = money.ToString();
+        currentMoneyTxt.text = moneyType.currentMoney.ToString();
+        totalMoneyTxt.text = moneyType.totalMoney.ToString();
     }
     void Update()
     {
@@ -52,11 +52,13 @@ public class GameManager : MonoBehaviour
         {
             GameStartPanel.SetActive(false);
             GameRunTimePanel.SetActive(true);
+            GameFinishPanel.SetActive(false);
         }
         else
         {
             GameStartPanel.SetActive(true);
             GameRunTimePanel.SetActive(false);
+            GameFinishPanel.SetActive(true);
         }
     }
     private void FixedUpdate()
@@ -88,6 +90,7 @@ public class GameManager : MonoBehaviour
         AudioController.audioControllerInstance.Play("MoneySound");
         basketType.totalFruit++;    // Toplanan meyve sayýsýný arttýr
         moneyType.currentMoney += basketType.fruitPrice;    // Oyun içnde toplanan parayý arttýr
+        currentMoneyTxt.text = moneyType.currentMoney.ToString();
     }
     public void Fail(GameObject failGate)
     {

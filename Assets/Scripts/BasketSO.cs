@@ -8,6 +8,7 @@ public class BasketSO : ScriptableObject
     [SerializeField] private int _totalFruit;
     [SerializeField] private int _minFruit;
     [SerializeField] private float _fruitPrice=0.1f;
+    [SerializeField] private int _priceLevel=1;
 
     public int totalFruit
     {
