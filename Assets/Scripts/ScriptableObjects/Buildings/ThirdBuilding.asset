@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f76a685c73963243a6211caf42ba96e, type: 3}
   m_Name: ThirdBuilding
   m_EditorClassIdentifier: 
-  _currentValue: 0
+  _currentValue: 150
   _maxValue: 150
   _moneyMaking: 50
-  _locked: 1
+  _locked: 0
   _lockedColor: {r: 1, g: 0, b: 0, a: 1}
   _unlockedColor: {r: 0, g: 1, b: 0, a: 1}

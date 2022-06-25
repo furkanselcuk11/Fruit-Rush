@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f76a685c73963243a6211caf42ba96e, type: 3}
   m_Name: FourthBuilding
   m_EditorClassIdentifier: 
-  _currentValue: 0
+  _currentValue: 300
   _maxValue: 300
   _moneyMaking: 100
-  _locked: 1
+  _locked: 0
   _lockedColor: {r: 1, g: 0, b: 0, a: 1}
   _unlockedColor: {r: 0, g: 1, b: 0, a: 1}

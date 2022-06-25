@@ -9,18 +9,33 @@ public class Building : MonoBehaviour
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir  
     [SerializeField] private GameObject lockedPlane;
     [SerializeField] private TextMeshPro buildingText;
+    [SerializeField] private GameObject moneyPrefab;
+    [SerializeField] private Transform moneyPos;
     void Start()
-    {
-        lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.lockedColor;
-        buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();
+    {        
+        if (buildingType.locked)
+        {
+            lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.lockedColor;
+        }
+        else
+        {
+            lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;
+            
+            for (int i = 0; i < 10; i++)
+            {
+                var position = new Vector3(Random.Range(moneyPos.position.x - 1f, moneyPos.position.x + 1f),
+            moneyPos.position.y,
+            Random.Range(moneyPos.position.z - 1f, moneyPos.position.z + 1f));
+                Instantiate(moneyPrefab, position, Quaternion.identity);
+            }            
+        }
+
+        buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();       
+        
     }    
     void Update()
     {
-        if (!buildingType.locked)
-        {
-            lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;    
-            // Para üretme
-        }
+        
     }
     private void OnTriggerStay(Collider other)
     {
@@ -34,9 +49,10 @@ public class Building : MonoBehaviour
                 AudioController.audioControllerInstance.Play("BuildingSound");
                 if (buildingType.currentValue == buildingType.maxValue)
                 {
-                    // Binan toplanan meyve sayýsý max olduðu zaman kilit kaldýr ve ses çal
+                    // Binanýn toplanan meyve sayýsý max olduðu zaman kilit kaldýr ve ses çal
                     AudioController.audioControllerInstance.Play("BuildingOpenedSound");
-                    buildingType.locked = false;    // Para kaznama aktif olur
+                    buildingType.locked = false;    // Bina kiliti açýlýr
+                    lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;   // Rengi Yeil olsun
                 }
             }
             else

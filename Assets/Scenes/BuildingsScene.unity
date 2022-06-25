@@ -1626,6 +1626,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737381807}
   m_Mesh: {fileID: 4300000, guid: 72e65272e9752d842a914dd27fd86306, type: 3}
+--- !u!1 &765093425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765093426}
+  m_Layer: 0
+  m_Name: MoneyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &765093426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765093425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.319, y: 0.5, z: 0.986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7628750325697350769}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778384867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2326,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1055775130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055775131}
+  m_Layer: 0
+  m_Name: MoneyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055775131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055775130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.969, y: 0.5, z: 1.669}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3390145251318248026}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061335219
@@ -3084,6 +3146,37 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+--- !u!1 &1270755794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270755795}
+  m_Layer: 0
+  m_Name: MoneyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270755795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270755794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.41, y: 0.5, z: -2.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7783203798492943826}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300912037
 GameObject:
   m_ObjectHideFlags: 0
@@ -4793,6 +4886,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5083475484015756449, guid: 32f9194afd70dba4691db6e1c110cc86, type: 3}
   m_PrefabInstance: {fileID: 1566628796}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1648394320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648394321}
+  m_Layer: 0
+  m_Name: MoneyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648394321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648394320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.102, y: 0.5, z: -2.537}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4984302321847836}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651245364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,6 +6952,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107458478}
   m_Mesh: {fileID: 4300000, guid: 72e65272e9752d842a914dd27fd86306, type: 3}
+--- !u!1 &2117358651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117358652}
+  m_Layer: 0
+  m_Name: MoneyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2117358652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117358651}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.59, y: 0.5, z: -3.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5979218980015698975}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127421161
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,6 +7213,7 @@ Transform:
   - {fileID: 4653003682081980}
   - {fileID: 1499360957}
   - {fileID: 1225360617}
+  - {fileID: 1648394321}
   m_Father: {fileID: 2027442875}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7077,6 +7233,8 @@ MonoBehaviour:
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   lockedPlane: {fileID: 1499360956}
   buildingText: {fileID: 1225360618}
+  moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
+  moneyPos: {fileID: 1648394321}
 --- !u!65 &4984302321847838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8756,6 +8914,7 @@ Transform:
   - {fileID: 3390255468201820184}
   - {fileID: 1709983980}
   - {fileID: 191687483}
+  - {fileID: 1055775131}
   m_Father: {fileID: 2027442875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8775,6 +8934,8 @@ MonoBehaviour:
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   lockedPlane: {fileID: 1709983979}
   buildingText: {fileID: 191687484}
+  moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
+  moneyPos: {fileID: 1055775131}
 --- !u!65 &3390145251318248028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9958,6 +10119,7 @@ Transform:
   - {fileID: 5979495774767620585}
   - {fileID: 1956997600}
   - {fileID: 1454342735}
+  - {fileID: 2117358652}
   m_Father: {fileID: 2027442875}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9977,6 +10139,8 @@ MonoBehaviour:
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   lockedPlane: {fileID: 1956997599}
   buildingText: {fileID: 1454342736}
+  moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
+  moneyPos: {fileID: 2117358652}
 --- !u!65 &5979218980015698977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14122,6 +14286,7 @@ Transform:
   - {fileID: 7628808766599827975}
   - {fileID: 1326158407}
   - {fileID: 1753786201}
+  - {fileID: 765093426}
   m_Father: {fileID: 2027442875}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14141,6 +14306,8 @@ MonoBehaviour:
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   lockedPlane: {fileID: 1326158406}
   buildingText: {fileID: 1753786202}
+  moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
+  moneyPos: {fileID: 765093426}
 --- !u!65 &7628750325697350771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14314,6 +14481,7 @@ Transform:
   - {fileID: 7790509257588828718}
   - {fileID: 2090355377}
   - {fileID: 1557487362}
+  - {fileID: 1270755795}
   m_Father: {fileID: 2027442875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14370,6 +14538,8 @@ MonoBehaviour:
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   lockedPlane: {fileID: 2090355376}
   buildingText: {fileID: 1557487363}
+  moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
+  moneyPos: {fileID: 1270755795}
 --- !u!65 &7785041179505553768
 BoxCollider:
   m_ObjectHideFlags: 0

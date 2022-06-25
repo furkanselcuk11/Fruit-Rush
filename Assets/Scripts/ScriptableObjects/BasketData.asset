@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af440c29cd689a408ca5d4d05f47cf1, type: 3}
   m_Name: BasketData
   m_EditorClassIdentifier: 
-  _totalFruit: 0
+  _totalFruit: 290
   _currentFruit: 0
   _minFruit: 0
   _fruitPrice: 0.1
