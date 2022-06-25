@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Door_1
   m_EditorClassIdentifier: 
   _totalMoney: 10000
-  _currentMoney: 10000
-  _locked: 0
+  _currentMoney: 0
+  _locked: 1
   _lockedColor: {r: 1, g: 0, b: 0, a: 1}
   _unlockedColor: {r: 0, g: 1, b: 0, a: 1}
