@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class JoystickController : MonoBehaviour
 {
+    [SerializeField] private BasketSO basketType = null;    // Scriptable Objects erişir 
+
+    [Space]
+    [Header("Player Controller")]
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _rotationSpeed = 500;
 
@@ -14,6 +18,9 @@ public class JoystickController : MonoBehaviour
     [Header("Joystick Controller")]
     [SerializeField] Joystick joystick;   // Joystick scripti
     float vertical, horizontal; // Player y�n�  
+    [Space]
+    [Header("Basket Controller")]
+    [SerializeField] private GameObject collectedBoxFruits;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,7 +28,15 @@ public class JoystickController : MonoBehaviour
     }
     void Update()
     {
-        
+        // Sepetteki meyvelerin aktiflik kontrolü
+        if (basketType.totalFruit == basketType.minFruit)
+        {
+            collectedBoxFruits.SetActive(false);
+        }
+        else
+        {
+            collectedBoxFruits.SetActive(true);
+        }
     }
     private void FixedUpdate()
     {
@@ -44,22 +59,13 @@ public class JoystickController : MonoBehaviour
                 GameManager.gamemanagerInstance.CollectionBox.SetActive(true);
             }
             else
-            {
-                
+            {                
                 anim.SetBool("isRunning", false);
             }
         }
         else
         {
             GameManager.gamemanagerInstance.CollectionBox.SetActive(false);
-        }
-        
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Fruit"))
-        {
-            GameManager.gamemanagerInstance.Add(other.gameObject);
-        }
+        }        
     }
 }

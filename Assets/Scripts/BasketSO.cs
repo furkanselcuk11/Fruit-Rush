@@ -6,6 +6,7 @@ using UnityEngine;
 public class BasketSO : ScriptableObject
 {
     [SerializeField] private int _totalFruit;
+    [SerializeField] private int _currentFruit;
     [SerializeField] private int _minFruit;
     [SerializeField] private float _fruitPrice=0.1f;
     [SerializeField] private int _priceLevel=1;
@@ -14,6 +15,11 @@ public class BasketSO : ScriptableObject
     {
         get { return _totalFruit; }
         set { _totalFruit = value; }
+    }
+    public int currentFruit
+    {
+        get { return _currentFruit; }
+        set { _currentFruit = value; }
     }
     public int minFruit
     {

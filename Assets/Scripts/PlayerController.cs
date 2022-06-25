@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             if (GameManager.gamemanagerInstance.Collected.Count<2)
             {
+                // 2 Ýçinde en az bir sepet bulundurduðu için
                 GameManager.gamemanagerInstance.Restart();
             }
         }
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
         {
             // Finish alanýna geldiyse Level biter ve hareket etme false durumuna geçer
             GameManager.gamemanagerInstance.isFinish = true;
-            GameManager.gamemanagerInstance.NextLevel();
+            GameManager.gamemanagerInstance.NextLevelBuilding();
             // Dans animasyonu
             // Konfeti patlat            
         }

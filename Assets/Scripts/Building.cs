@@ -36,12 +36,13 @@ public class Building : MonoBehaviour
                 {
                     // Binan toplanan meyve sayýsý max olduðu zaman kilit kaldýr ve ses çal
                     AudioController.audioControllerInstance.Play("BuildingOpenedSound");
-                    buildingType.locked = false;
+                    buildingType.locked = false;    // Para kaznama aktif olur
                 }
             }
             else
             {
                 Debug.Log("Eksik Malzeme veya Bina açýldý");
+                transform.GetComponent<BoxCollider>().enabled = false;
             }
         }        
     }

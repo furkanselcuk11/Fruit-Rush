@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
-        basketType.totalFruit = basketType.minFruit;
+        basketType.currentFruit = basketType.minFruit;
         moneyType.currentMoney = moneyType.minMoney;
         currentMoneyTxt.text = moneyType.currentMoney.ToString();
         totalMoneyTxt.text = moneyType.totalMoney.ToString();
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
         collectedObject.tag = "Collected";
         Collected.Add(collectedObject.transform); // Toplanan objeleri Collected listesine ekler
         AudioController.audioControllerInstance.Play("MoneySound");
-        basketType.totalFruit++;    // Toplanan meyve sayýsýný arttýr
+        basketType.currentFruit++;    // Toplanan meyve sayýsýný arttýr
         moneyType.currentMoney += basketType.fruitPrice;    // Oyun içnde toplanan parayý arttýr
         currentMoneyTxt.text = moneyType.currentMoney.ToString();
     }
@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
                 // totalCollect-1 olmas? player objesinin i?inde olmas?ndan ve silmemesi i?in
                 Destroy((Collected.ElementAt(Collected.Count - 1).gameObject),2);   // Tüm objeler silinir 
                 Collected.RemoveAt(Collected.Count - 1); // Silinnen objeler Collected listesinden at?l?r
-                basketType.totalFruit--;    // Sepette toplanan meyve sayýsýný azalt
+                basketType.currentFruit--;    // Sepette toplanan meyve sayýsýný azalt
             }
         }
         failGate.GetComponent<BoxCollider>().isTrigger = true;
@@ -132,18 +132,22 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }  
-    public void NextLevel()
+    public void NextLevelBuilding()
     {
         SceneManager.LoadScene(0);
-        ////  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
-        //if (SceneManager.GetActiveScene().buildIndex == 2)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
-        //{
-        //    SceneManager.LoadScene(0);  // Oyunun ilk sahnesinin Ýndex deðerini çalýþtýrýr
-        //}
-        //else
-        //{
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //    //Bir sonraki levele geçer
-        //}
+        basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
+    }
+    public void NextLevel()
+    {
+        //  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
+        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCount)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
+        {
+            SceneManager.LoadScene(1);  // Oyunun ilk sahnesinin Ýndex deðerini çalýþtýrýr
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // Currentevel+1 diye deðiþtir
+            //Bir sonraki levele geçer
+        }
     }
 }

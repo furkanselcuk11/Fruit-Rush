@@ -750,7 +750,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371669202
 GameObject:
@@ -2695,42 +2695,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160937747}
   m_Mesh: {fileID: 4300000, guid: 72e65272e9752d842a914dd27fd86306, type: 3}
---- !u!1 &1220829872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1220829873}
-  m_Layer: 0
-  m_Name: Fruits
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1220829873
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220829872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7637162254296206671}
-  - {fileID: 8052177914197346820}
-  - {fileID: 3214629266919392149}
-  - {fileID: 2039902420896671931}
-  - {fileID: 5945458722956836864}
-  m_Father: {fileID: 1818431167}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1225360616
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,7 +3486,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh637124
+  m_Name: pb_Mesh24938
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5457,7 +5421,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1804358016}
-  - {fileID: 1220829873}
   - {fileID: 2027442875}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -6016,7 +5979,7 @@ Transform:
   - {fileID: 3390145251318248026}
   - {fileID: 4984302321847836}
   m_Father: {fileID: 1818431167}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050042834
 GameObject:
@@ -6214,6 +6177,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090355376}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2106692968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106692969}
+  m_Layer: 0
+  m_Name: CollectionBoxFruits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2106692969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106692968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7637162254296206671}
+  - {fileID: 8052177914197346820}
+  - {fileID: 3214629266919392149}
+  - {fileID: 2039902420896671931}
+  - {fileID: 5945458722956836864}
+  m_Father: {fileID: 6918471720206551217}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2107458478
 GameObject:
   m_ObjectHideFlags: 0
@@ -6341,7 +6340,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2140879206
 GameObject:
@@ -7531,14 +7530,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039902420896956523}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 20}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: 0.30371487, y: -0.34035116, z: 0.21162084, w: 0.86436975}
+  m_LocalPosition: {x: 0.398, y: 0.914, z: -0.70626503}
+  m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 0.83333325}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220829873}
+  m_Father: {fileID: 2106692969}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 41.997, y: -38.224, z: 12.361}
 --- !u!1 &2039902420896956523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7550,11 +7549,9 @@ GameObject:
   - component: {fileID: 2039902420896671931}
   - component: {fileID: 2039902420900093911}
   - component: {fileID: 2039902420898978917}
-  - component: {fileID: 2039902420900093912}
-  - component: {fileID: 2039902420900093913}
   m_Layer: 0
   m_Name: Corn
-  m_TagString: Fruit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7609,33 +7606,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039902420896956523}
   m_Mesh: {fileID: 4300000, guid: b73357a706ca24143b394f115a796cbc, type: 3}
---- !u!65 &2039902420900093912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039902420896956523}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.42835715, y: 0.45040146, z: 1.5238458}
-  m_Center: {x: 0.000000014901161, y: -0.000000014901161, z: 0.025178969}
---- !u!114 &2039902420900093913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039902420896956523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e0edd8682284d4a88c602016add503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
-  turnDirection: 1
 --- !u!4 &2117852396630475609
 Transform:
   m_ObjectHideFlags: 0
@@ -7949,11 +7919,9 @@ GameObject:
   - component: {fileID: 3214629266919392149}
   - component: {fileID: 3214629266922350919}
   - component: {fileID: 3214629266921251595}
-  - component: {fileID: 3214629266922350920}
-  - component: {fileID: 3214629266922350921}
   m_Layer: 0
   m_Name: Carrot
-  m_TagString: Fruit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7965,14 +7933,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3214629266919259555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 15}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: 0.9541613, y: -0, z: -0, w: 0.29929304}
+  m_LocalPosition: {x: 0.383, y: 1.021, z: 0.375}
+  m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 0.83333325}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220829873}
+  m_Father: {fileID: 2106692969}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 145.17, y: 0, z: 0}
 --- !u!23 &3214629266921251595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8023,33 +7991,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3214629266919259555}
   m_Mesh: {fileID: 4300000, guid: 4e0f64d8c8bcb4346ab30955b2d8f12a, type: 3}
---- !u!65 &3214629266922350920
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3214629266919259555}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5017616, y: 0.5805589, z: 2.056419}
-  m_Center: {x: -0.018441178, y: 0.009243816, z: -0.23694748}
---- !u!114 &3214629266922350921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3214629266919259555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e0edd8682284d4a88c602016add503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
-  turnDirection: 0
 --- !u!4 &3280257148022248737
 Transform:
   m_ObjectHideFlags: 0
@@ -9276,11 +9217,9 @@ GameObject:
   - component: {fileID: 5945458722956836864}
   - component: {fileID: 5945458722957618198}
   - component: {fileID: 5945458722958635006}
-  - component: {fileID: 5945458722958635007}
-  - component: {fileID: 5945458722958635008}
   m_Layer: 0
   m_Name: Mushroom
-  m_TagString: Fruit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9292,14 +9231,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5945458722956618704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.19670966, w: 0.9804618}
+  m_LocalPosition: {x: 0.336, y: 0.746, z: 0.031}
+  m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220829873}
+  m_Father: {fileID: 2106692969}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -22.689}
 --- !u!33 &5945458722957618198
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9350,33 +9289,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5945458722958635007
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5945458722956618704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.95491433, y: 0.6016528, z: 0.81812036}
-  m_Center: {x: 0.03201534, y: 0.23904368, z: -0.076084346}
---- !u!114 &5945458722958635008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5945458722956618704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e0edd8682284d4a88c602016add503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
-  turnDirection: 0
 --- !u!4 &5950530160382643392
 Transform:
   m_ObjectHideFlags: 0
@@ -9846,7 +9758,7 @@ Transform:
   - {fileID: 6918471720206551217}
   - {fileID: 6918471720892115591}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6569254078242086718
 MonoBehaviour:
@@ -9860,9 +9772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0fa2550ea4f2c4d8ac9ea22e5c08a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
   _movementSpeed: 300
   _rotationSpeed: 500
   joystick: {fileID: 6605235572454407225}
+  collectedBoxFruits: {fileID: 2106692968}
 --- !u!4 &6580406025362315316
 Transform:
   m_ObjectHideFlags: 0
@@ -12598,6 +12512,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6918471719778592623}
+  - {fileID: 2106692969}
   m_Father: {fileID: 6569254078242086717}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13669,11 +13584,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637162254296416325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.334, y: 0.784, z: -0.445}
+  m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220829873}
+  m_Father: {fileID: 2106692969}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7637162254296416325
@@ -13687,11 +13602,9 @@ GameObject:
   - component: {fileID: 7637162254296206671}
   - component: {fileID: 7637162254297563785}
   - component: {fileID: 7637162254298612913}
-  - component: {fileID: 7637162254298612914}
-  - component: {fileID: 7637162254298612915}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Fruit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13746,33 +13659,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7637162254298612914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637162254296416325}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43613508, y: 0.3503834, z: 0.43613505}
-  m_Center: {x: 0, y: 0.016276143, z: 0.000000007450581}
---- !u!114 &7637162254298612915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7637162254296416325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e0edd8682284d4a88c602016add503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
-  turnDirection: 0
 --- !u!4 &7669305269426318893
 Transform:
   m_ObjectHideFlags: 0
@@ -14047,14 +13933,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8052177914197482530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.38773057, y: -0.1320224, z: 0.17947963, w: 0.8944396}
+  m_LocalPosition: {x: -0.457, y: 0.5139897, z: 0.047}
+  m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1220829873}
+  m_Father: {fileID: 2106692969}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -40.257, y: -29.462, z: 33.701}
 --- !u!1 &8052177914197482530
 GameObject:
   m_ObjectHideFlags: 0
@@ -14066,42 +13952,13 @@ GameObject:
   - component: {fileID: 8052177914197346820}
   - component: {fileID: 8052177914194438038}
   - component: {fileID: 8052177914195516944}
-  - component: {fileID: 8052177914197482531}
-  - component: {fileID: 8052177914197482532}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Fruit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8052177914197482531
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052177914197482530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2890214, y: 0.22416595, z: 1.0681831}
-  m_Center: {x: 0.05546467, y: 0, z: 0.052800834}
---- !u!114 &8052177914197482532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8052177914197482530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e0edd8682284d4a88c602016add503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSpeed: 100
-  turnDirection: 1
 --- !u!4 &8056659891013700618
 Transform:
   m_ObjectHideFlags: 0
