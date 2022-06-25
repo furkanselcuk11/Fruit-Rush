@@ -26,7 +26,6 @@ public class Building : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.gamemanagerInstance.startTheGame = false;
             if (basketType.totalFruit > basketType.minFruit & buildingType.locked)
             {
                 basketType.totalFruit--;    // Toplanan meyve sayýsý azalt

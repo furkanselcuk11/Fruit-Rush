@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir 
     [SerializeField] private MoneySO moneyType = null;    // Scriptable Objects eriþir 
 
-    [HideInInspector] public bool startTheGame; // Oyun ba?lad?m?
+    public bool startTheGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
     [Space]
     [Header("Game UI Controller")]
