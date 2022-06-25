@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public bool startTheGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
-    [SerializeField] private GameObject TapToPlay;
+    [Space]
+    [Header("Game UI Controller")]
+    [SerializeField] private GameObject GameStartPanel;
+    [SerializeField] private GameObject GameRunTimePanel;
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
@@ -47,11 +50,13 @@ public class GameManager : MonoBehaviour
     {
         if (startTheGame)
         {
-            TapToPlay.SetActive(false);
+            GameStartPanel.SetActive(false);
+            GameRunTimePanel.SetActive(true);
         }
         else
         {
-            TapToPlay.SetActive(true);
+            GameStartPanel.SetActive(true);
+            GameRunTimePanel.SetActive(false);
         }
     }
     private void FixedUpdate()
