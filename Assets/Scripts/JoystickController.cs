@@ -18,11 +18,10 @@ public class JoystickController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        GameManager.gamemanagerInstance.startTheGame = true;
     }
     void Update()
     {
-
+        
     }
     private void FixedUpdate()
     {
@@ -31,7 +30,7 @@ public class JoystickController : MonoBehaviour
     public void JoystickMove()
     {
         // Joystick kontrol�
-        if (GameManager.gamemanagerInstance.startTheGame)
+        if (GameManager.gamemanagerInstance.isFinish)
         {
             vertical = joystick.Vertical * _movementSpeed * Time.fixedDeltaTime;
             horizontal = joystick.Horizontal * _movementSpeed * Time.fixedDeltaTime;

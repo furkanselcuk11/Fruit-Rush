@@ -48,13 +48,19 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (startTheGame)
+        if (startTheGame & !isFinish)
         {
             GameStartPanel.SetActive(false);
             GameRunTimePanel.SetActive(true);
             GameFinishPanel.SetActive(false);
         }
         else
+        {
+            GameStartPanel.SetActive(false);
+            GameRunTimePanel.SetActive(false);
+            GameFinishPanel.SetActive(true);
+        }
+        if (!startTheGame & !isFinish)
         {
             GameStartPanel.SetActive(true);
             GameRunTimePanel.SetActive(false);
@@ -125,5 +131,19 @@ public class GameManager : MonoBehaviour
         startTheGame = false;   // Oyuna ba?lamak pasif olur
         Debug.Log("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }    
+    }  
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(0);
+        ////  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
+        //if (SceneManager.GetActiveScene().buildIndex == 2)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
+        //{
+        //    SceneManager.LoadScene(0);  // Oyunun ilk sahnesinin Ýndex deðerini çalýþtýrýr
+        //}
+        //else
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //    //Bir sonraki levele geçer
+        //}
+    }
 }

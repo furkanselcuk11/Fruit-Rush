@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             // Finish alanýna geldiyse Level biter ve hareket etme false durumuna geçer
             GameManager.gamemanagerInstance.isFinish = true;
-            GameManager.gamemanagerInstance.startTheGame = false;
+            GameManager.gamemanagerInstance.NextLevel();
             // Dans animasyonu
             // Konfeti patlat            
         }
