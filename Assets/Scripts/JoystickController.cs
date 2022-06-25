@@ -5,6 +5,7 @@ using UnityEngine;
 public class JoystickController : MonoBehaviour
 {
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects erişir 
+    [SerializeField] private MoneySO moneyType = null;    // Scriptable Objects erişir 
 
     [Space]
     [Header("Player Controller")]
@@ -67,5 +68,15 @@ public class JoystickController : MonoBehaviour
         {
             GameManager.gamemanagerInstance.CollectionBox.SetActive(false);
         }        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Money"))
+        {
+            AudioController.audioControllerInstance.Play("MoneySound");
+            moneyType.totalMoney+=other.gameObject.GetComponent<Money>().value;
+            GameManager.gamemanagerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
+            Destroy(other.gameObject);
+        }
     }
 }

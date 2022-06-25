@@ -11,8 +11,10 @@ public class Building : MonoBehaviour
     [SerializeField] private TextMeshPro buildingText;
     [SerializeField] private GameObject moneyPrefab;
     [SerializeField] private Transform moneyPos;
+    [SerializeField] private float x;
     void Start()
-    {        
+    {
+        x = buildingType.monkeyMaking;
         if (buildingType.locked)
         {
             lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.lockedColor;
@@ -23,10 +25,13 @@ public class Building : MonoBehaviour
             
             for (int i = 0; i < 10; i++)
             {
+                // moneyPos etrafýnda random para üretir ve binada üretlien paradýn deðeri paraya aktarýlýr
                 var position = new Vector3(Random.Range(moneyPos.position.x - 1f, moneyPos.position.x + 1f),
             moneyPos.position.y,
             Random.Range(moneyPos.position.z - 1f, moneyPos.position.z + 1f));
-                Instantiate(moneyPrefab, position, Quaternion.identity);
+                GameObject newObj=Instantiate(moneyPrefab, position, Quaternion.identity);
+                newObj.GetComponent<Money>().value = buildingType.monkeyMaking; // Binanýn para üretme deðeri eklenir
+                newObj.transform.parent = moneyPos;
             }            
         }
 

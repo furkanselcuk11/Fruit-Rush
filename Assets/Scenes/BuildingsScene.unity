@@ -7235,6 +7235,7 @@ MonoBehaviour:
   buildingText: {fileID: 1225360618}
   moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
   moneyPos: {fileID: 1648394321}
+  x: 0
 --- !u!65 &4984302321847838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8936,6 +8937,7 @@ MonoBehaviour:
   buildingText: {fileID: 191687484}
   moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
   moneyPos: {fileID: 1055775131}
+  x: 0
 --- !u!65 &3390145251318248028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10141,6 +10143,7 @@ MonoBehaviour:
   buildingText: {fileID: 1454342736}
   moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
   moneyPos: {fileID: 2117358652}
+  x: 0
 --- !u!65 &5979218980015698977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10488,6 +10491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basketType: {fileID: 11400000, guid: 98d4bf6adda8e7f47ab861163889f64d, type: 2}
+  moneyType: {fileID: 11400000, guid: a096bc43b4f84a44cb78130993d8f349, type: 2}
   _movementSpeed: 300
   _rotationSpeed: 500
   joystick: {fileID: 6605235572454407225}
@@ -14308,6 +14312,7 @@ MonoBehaviour:
   buildingText: {fileID: 1753786202}
   moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
   moneyPos: {fileID: 765093426}
+  x: 0
 --- !u!65 &7628750325697350771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14540,6 +14545,7 @@ MonoBehaviour:
   buildingText: {fileID: 1557487363}
   moneyPrefab: {fileID: 4160160994881460320, guid: 4129faca2580b9b4489d5925ab438a42, type: 3}
   moneyPos: {fileID: 1270755795}
+  x: 0
 --- !u!65 &7785041179505553768
 BoxCollider:
   m_ObjectHideFlags: 0
