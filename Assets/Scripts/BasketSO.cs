@@ -10,6 +10,7 @@ public class BasketSO : ScriptableObject
     [SerializeField] private int _minFruit;
     [SerializeField] private float _fruitPrice=0.1f;
     [SerializeField] private int _priceLevel=1;
+    [SerializeField] private int _pricelevelUP=100;
 
     public int totalFruit
     {
@@ -30,5 +31,15 @@ public class BasketSO : ScriptableObject
     {
         get { return _fruitPrice; }
         set { _fruitPrice = value; }
+    }
+    public int priceLevel
+    {
+        get { return _priceLevel; }
+        set { _priceLevel = value; }
+    }
+    public int pricelevelUP
+    {
+        get { return _pricelevelUP; }
+        set { _pricelevelUP = value; }
     }
 }

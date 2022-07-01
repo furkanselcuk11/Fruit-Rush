@@ -17,3 +17,4 @@ MonoBehaviour:
   _minFruit: 0
   _fruitPrice: 0.1
   _priceLevel: 1
+  _pricelevelUP: 100

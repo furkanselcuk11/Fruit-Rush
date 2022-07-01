@@ -46,7 +46,7 @@ public class DoorsController : MonoBehaviour
                 if (moneyType.totalMoney > moneyType.minMoney)
                 {
                     moneyType.totalMoney--;    // Toplanan para sayýsýný azalt
-                    GameManager.gamemanagerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
+                    UIController.uicontrollerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
                     doorsType.currentMoney++;    // Binanýn toplanan para sayýsýný arttýr
                     doorText.text = doorsType.currentMoney.ToString() + " / " + doorsType.totalMoney.ToString();
                     AudioController.audioControllerInstance.Play("BuildingSound");

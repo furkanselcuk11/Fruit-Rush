@@ -47,7 +47,7 @@ public class MobileInput : MonoBehaviour
         {   // Mosue tusuna basildiginda veya ekranda parmak ile basildigýndaki ilk pozisyon degerini al?ir
             start_pos = Input.mousePosition;    // ilk posizsyon de?geri tutulur
             tap = true; // Dokunma aktif olur  
-            GameManager.gamemanagerInstance.startTheGame = true;
+            //GameManager.gamemanagerInstance.startTheGame = true;
             GameManager.gamemanagerInstance.isFinish = false;
             // Oyuna baþlamak için ekrana dokun (StartGame) True olur
         }

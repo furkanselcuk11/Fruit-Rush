@@ -75,7 +75,7 @@ public class JoystickController : MonoBehaviour
         {
             AudioController.audioControllerInstance.Play("MoneySound");
             moneyType.totalMoney+=other.gameObject.GetComponent<Money>().value;
-            GameManager.gamemanagerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
+            UIController.uicontrollerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
             Destroy(other.gameObject);
         }
     }

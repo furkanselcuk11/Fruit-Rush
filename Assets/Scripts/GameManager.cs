@@ -11,13 +11,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir 
     [SerializeField] private MoneySO moneyType = null;    // Scriptable Objects eriþir 
 
-    public bool startTheGame; // Oyun ba?lad?m?
+    public bool startGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
-    [Space]
-    [Header("Game UI Controller")]
-    [SerializeField] private GameObject GameStartPanel;
-    [SerializeField] private GameObject GameRunTimePanel;
-    [SerializeField] private GameObject GameFinishPanel;
+    //[Space]
+    //[Header("Game UI Controller")]
+    //[SerializeField] private GameObject GameStartPanel;
+    //[SerializeField] private GameObject GameRunTimePanel;
+    //[SerializeField] private GameObject GameFinishPanel;
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
@@ -26,10 +26,10 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Collected Controller")]
     public List<Transform> Collected = new List<Transform>();   // Toplanan objelerin listesi
-    [Space]
-    [Header("Score Controller")]
-    public TextMeshProUGUI totalMoneyTxt;
-    public TextMeshProUGUI currentMoneyTxt;
+    //[Space]
+    //[Header("Score Controller")]
+    //public TextMeshProUGUI totalMoneyTxt;
+    //public TextMeshProUGUI currentMoneyTxt;
 
     private void Awake()
     {
@@ -43,29 +43,13 @@ public class GameManager : MonoBehaviour
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         basketType.currentFruit = basketType.minFruit;
         moneyType.currentMoney = moneyType.minMoney;
-        currentMoneyTxt.text = moneyType.currentMoney.ToString();
-        totalMoneyTxt.text = moneyType.totalMoney.ToString();
+        //currentMoneyTxt.text = moneyType.currentMoney.ToString();
+        //totalMoneyTxt.text = moneyType.totalMoney.ToString();
     }
     void Update()
     {
-        if (startTheGame & !isFinish)
-        {
-            GameStartPanel.SetActive(false);
-            GameRunTimePanel.SetActive(true);
-            GameFinishPanel.SetActive(false);
-        }
-        else
-        {
-            GameStartPanel.SetActive(false);
-            GameRunTimePanel.SetActive(false);
-            GameFinishPanel.SetActive(true);
-        }
-        if (!startTheGame & !isFinish)
-        {
-            GameStartPanel.SetActive(true);
-            GameRunTimePanel.SetActive(false);
-            GameFinishPanel.SetActive(true);
-        }
+        //UpdateUI();
+        UIController.uicontrollerInstance.UpdatePanel();
     }
     private void FixedUpdate()
     {
@@ -83,6 +67,33 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void StartTheGame()
+    {
+        startGame = true;
+        isFinish = false;
+    }
+    //void UpdateUI()
+    //{
+    //    //if (startGame & !isFinish)
+    //    //{
+    //    //    GameStartPanel.SetActive(false);
+    //    //    GameRunTimePanel.SetActive(true);
+    //    //    GameFinishPanel.SetActive(false);
+    //    //}
+    //    //else
+    //    //{
+    //    //    GameStartPanel.SetActive(false);
+    //    //    GameRunTimePanel.SetActive(false);
+    //    //    GameFinishPanel.SetActive(true);
+    //    //}
+    //    //if (!startGame & !isFinish)
+    //    //{
+    //    //    GameStartPanel.SetActive(true);
+    //    //    GameRunTimePanel.SetActive(false);
+    //    //    GameFinishPanel.SetActive(true);
+    //    //}
+    //    UIController.uicontrollerInstance.UpdatePanel();
+    //}
 
     public void Add(GameObject collectedObject)
     {
@@ -96,7 +107,8 @@ public class GameManager : MonoBehaviour
         AudioController.audioControllerInstance.Play("MoneySound");
         basketType.currentFruit++;    // Toplanan meyve sayýsýný arttýr
         moneyType.currentMoney += basketType.fruitPrice;    // Oyun içnde toplanan parayý arttýr
-        currentMoneyTxt.text = moneyType.currentMoney.ToString();
+        UIController.uicontrollerInstance.UpdateUI();
+        //currentMoneyTxt.text = moneyType.currentMoney.ToString();
     }
     public void Fail(GameObject failGate)
     {
@@ -121,14 +133,14 @@ public class GameManager : MonoBehaviour
         AudioController.audioControllerInstance.Play("FailSound");
 
         // Eðer Engellere (Obstacles) çarpýldýysa karakter geri tepme yapýlýr
-        startTheGame = false;   // Tekrar ekrana dokunan kadar hareket etmez
+        startGame = false;   // Tekrar ekrana dokunan kadar hareket etmez
         Player.transform.position = Vector3.Lerp(Player.transform.position,
             new Vector3(0, Player.transform.position.y, Player.transform.position.z - 3f), swipeSpeed * Time.deltaTime);
     }
     public void Restart()
     {
         // E?er Toplanm?? obje yok ise ve Fail duvar?ndan ge?ilmi?se oyunu yeniden ba?lat
-        startTheGame = false;   // Oyuna ba?lamak pasif olur
+        startGame = false;   // Oyuna ba?lamak pasif olur
         Debug.Log("GameOver");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }  
@@ -136,6 +148,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
+        moneyType.totalMoney = moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
     }
     public void NextLevel()
     {
@@ -148,6 +161,23 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // Currentevel+1 diye deðiþtir
             //Bir sonraki levele geçer
+        }
+    }
+
+    public void FruitPriceLevel()
+    {
+        if (moneyType.totalMoney >= basketType.pricelevelUP)
+        {
+            moneyType.totalMoney -= basketType.pricelevelUP;
+            basketType.fruitPrice = basketType.fruitPrice * 2;            
+            basketType.pricelevelUP = basketType.pricelevelUP * 2;
+            basketType.priceLevel++;
+            
+            UIController.uicontrollerInstance.UpdateUI();
+        }
+        else
+        {
+            Debug.Log("Eksik para");
         }
     }
 }

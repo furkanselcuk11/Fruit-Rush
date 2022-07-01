@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (GameManager.gamemanagerInstance.startTheGame & !GameManager.gamemanagerInstance.isFinish)
+        if (GameManager.gamemanagerInstance.startGame & !GameManager.gamemanagerInstance.isFinish)
         {
             // Eðer StartGame true ve isFinish false ise hareket et
             transform.Translate(0, 0, speed * Time.fixedDeltaTime); // Karakter speed deðeri hýzýdna ileri hareket eder
