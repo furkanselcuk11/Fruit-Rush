@@ -18,10 +18,11 @@ public class JoystickController : MonoBehaviour
     [Space]
     [Header("Joystick Controller")]
     [SerializeField] Joystick joystick;   // Joystick scripti
-    float vertical, horizontal; // Player y�n�  
+    public float vertical, horizontal; // Player y�n�  
     [Space]
     [Header("Basket Controller")]
     [SerializeField] private GameObject collectedBoxFruits;
+   
     void Start()
     {
         rb = GetComponent<Rigidbody>();

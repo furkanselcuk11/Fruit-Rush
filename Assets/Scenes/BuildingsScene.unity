@@ -60824,7 +60824,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh283018
+  m_Name: pb_Mesh887946
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91846,6 +91846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_5
       objectReference: {fileID: 0}
+    - target: {fileID: 8295880604577170003, guid: 8a66f80a4faf78f4099fa8cdd51089dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a66f80a4faf78f4099fa8cdd51089dd, type: 3}
 --- !u!64 &453972213168309850
@@ -92503,6 +92507,10 @@ PrefabInstance:
     - target: {fileID: 4004695600350819260, guid: 78e8b374b4395c8448fa047a7ffc347d, type: 3}
       propertyPath: m_Name
       value: Car_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004695600350819260, guid: 78e8b374b4395c8448fa047a7ffc347d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e8b374b4395c8448fa047a7ffc347d, type: 3}
@@ -93417,6 +93425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_2
       objectReference: {fileID: 0}
+    - target: {fileID: 3630146616042576334, guid: 813f972ad5d89384288dfb694e7df1a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 813f972ad5d89384288dfb694e7df1a5, type: 3}
 --- !u!1001 &6497005598294371194
@@ -93474,6 +93486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2832361590341810558, guid: 3a9557c9fb941284ba8aa59c492f782b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9557c9fb941284ba8aa59c492f782b, type: 3}
 --- !u!4 &6569254078242086717
@@ -93510,6 +93526,8 @@ MonoBehaviour:
   _movementSpeed: 300
   _rotationSpeed: 500
   joystick: {fileID: 6605235572454407225}
+  vertical: 0
+  horizontal: 0
   collectedBoxFruits: {fileID: 2106692968}
 --- !u!114 &6605235572454407225 stripped
 MonoBehaviour:
@@ -97099,6 +97117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Person
       objectReference: {fileID: 0}
+    - target: {fileID: 7981781438007597046, guid: 7be89680034baa6408da8d7832a2acf4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7981781438007597047, guid: 7be89680034baa6408da8d7832a2acf4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -97428,6 +97450,10 @@ PrefabInstance:
     - target: {fileID: 8996832234692285710, guid: 3e2543ef2454696439d5ccfff00dd4b7, type: 3}
       propertyPath: m_Name
       value: Car_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8996832234692285710, guid: 3e2543ef2454696439d5ccfff00dd4b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2543ef2454696439d5ccfff00dd4b7, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a0b3d6c075ce4498f617358ee22ed7, type: 3}
   m_Name: Door_1
   m_EditorClassIdentifier: 
-  _totalMoney: 10000
+  _totalMoney: 1000
   _currentMoney: 0
   _locked: 1
   _lockedColor: {r: 1, g: 0, b: 0, a: 1}
