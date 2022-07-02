@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8c97ccd4ba2534996475cb82425562, type: 3}
+  m_Name: CarsData
+  m_EditorClassIdentifier: 
+  _selectedCar: 0
+  _cars:
+  - index: 0
+    price: 0
+    isUnlocked: 1
+  - index: 1
+    price: 1000
+    isUnlocked: 0
+  - index: 2
+    price: 5000
+    isUnlocked: 0
+  - index: 3
+    price: 20000
+    isUnlocked: 0
+  - index: 4
+    price: 50000
+    isUnlocked: 0
+  - index: 5
+    price: 100000
+    isUnlocked: 0
+  - index: 6
+    price: 500000
+    isUnlocked: 0

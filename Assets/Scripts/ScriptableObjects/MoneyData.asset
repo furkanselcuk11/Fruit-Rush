@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2d8d8fc0975f542aa12cc057f6370f, type: 3}
   m_Name: MoneyData
   m_EditorClassIdentifier: 
-  _totalMoney: 100
+  _totalMoney: 0
   _currentMoney: 0
   _minMoney: 0
+  _currentLevel: 1

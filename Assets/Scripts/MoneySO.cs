@@ -8,6 +8,7 @@ public class MoneySO : ScriptableObject
     [SerializeField] private float _totalMoney;
     [SerializeField] private float _currentMoney;
     [SerializeField] private float _minMoney;
+    [SerializeField] private int _currentLevel=1;
         
     public float totalMoney
     {
@@ -23,5 +24,10 @@ public class MoneySO : ScriptableObject
     {
         get { return _minMoney; }
         set { _minMoney = value; }
+    }
+    public int currentLevel
+    {
+        get { return _currentLevel; }
+        set { _currentLevel = value; }
     }
 }

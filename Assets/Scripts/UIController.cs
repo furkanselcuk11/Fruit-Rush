@@ -63,7 +63,7 @@ public class UIController : MonoBehaviour
         {
             GameStartPanel.SetActive(true);
             GameRunTimePanel.SetActive(false);
-            GameFinishPanel.SetActive(true);
+            GameFinishPanel.SetActive(false);
         }
     }
 }

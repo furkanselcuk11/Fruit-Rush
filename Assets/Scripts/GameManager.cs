@@ -149,6 +149,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
         basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
         moneyType.totalMoney = moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
+        moneyType.currentLevel++;   // Eðer finish alanýna gelmiþ ise bir sonraki leveli arttýr
     }
     public void NextLevel()
     {
@@ -159,7 +160,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // Currentevel+1 diye deðiþtir
+            SceneManager.LoadScene(moneyType.currentLevel + 1);   // Currentevel+1 diye deðiþtir
             //Bir sonraki levele geçer
         }
     }
