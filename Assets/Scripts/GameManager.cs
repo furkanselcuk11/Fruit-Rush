@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public bool startGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
+    
     //[Space]
     //[Header("Game UI Controller")]
     //[SerializeField] private GameObject GameStartPanel;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         basketType.currentFruit = basketType.minFruit;
         moneyType.currentMoney = moneyType.minMoney;
+        
         //currentMoneyTxt.text = moneyType.currentMoney.ToString();
         //totalMoneyTxt.text = moneyType.totalMoney.ToString();
     }
@@ -98,6 +100,7 @@ public class GameManager : MonoBehaviour
     public void Add(GameObject collectedObject)
     {
         // Stack (Toplama) i?lemi yapar
+        
         collectedObject.transform.parent = null;
         collectedObject.gameObject.AddComponent<Rigidbody>().isKinematic = true;
         collectedObject.gameObject.AddComponent<Stack>(); // Toplanan objeler Stack Componenti eklernir

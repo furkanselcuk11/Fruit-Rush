@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;    // Player hareket hýzý
     [SerializeField] private float horizontalspeed = 5f; // Player yön hareket hýzý
     [SerializeField] private float defaultSwipe = 4f;    // Player default kaydýrma mesafesi
+    [SerializeField] private ParticleSystem _fruitAddEffect;
 
 
     private Animator anim;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        _fruitAddEffect.Pause();
     }
     private void FixedUpdate()
     {
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Fruit"))
         {
             GameManager.gamemanagerInstance.Add(other.gameObject);
+            _fruitAddEffect.Play();
         }
         if (other.CompareTag("Fail"))
         {

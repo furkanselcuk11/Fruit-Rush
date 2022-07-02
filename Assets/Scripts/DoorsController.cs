@@ -28,13 +28,7 @@ public class DoorsController : MonoBehaviour
     }
     void Update()
     {
-        //if (!doorsType.locked)
-        //{
-        //    lockedPlane.GetComponent<MeshRenderer>().material.color = doorsType.unlockedColor;
-        //    // Kapý açýlýr
-        //    transform.GetChild(0).gameObject.SetActive(false);
-        //    transform.GetComponent<BoxCollider>().isTrigger = true;
-        //}
+
     }
     private void OnTriggerStay(Collider other)
     {
