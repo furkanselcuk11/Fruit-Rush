@@ -44860,7 +44860,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh370064
+  m_Name: pb_Mesh928650
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -68452,6 +68452,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4124556759034712647, guid: 7c4c7e8d1b589ce47889b1bb33714cf3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1042041305}
     - target: {fileID: 4892279554604053964, guid: 7c4c7e8d1b589ce47889b1bb33714cf3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -68758,7 +68762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014017b519167e24e96ff533edd37d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   horizontalspeed: 5
   defaultSwipe: 4
   _fruitAddEffect: {fileID: 1011321446}

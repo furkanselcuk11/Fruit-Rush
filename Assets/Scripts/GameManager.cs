@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         failGate.GetComponent<BoxCollider>().isTrigger = true;
         failGate.GetComponent<Collider>().enabled = false; // Fail(testere) kapýsýndan geçdiðimizde kapýnýn mesh collider kapat     
         AudioController.audioControllerInstance.Play("FailSound");
-
+        moneyType.currentMoney = moneyType.minMoney;
         // Eðer Engellere (Obstacles) çarpýldýysa karakter geri tepme yapýlýr
         startGame = false;   // Tekrar ekrana dokunan kadar hareket etmez
         Player.transform.position = Vector3.Lerp(Player.transform.position,
@@ -114,24 +114,28 @@ public class GameManager : MonoBehaviour
         //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         SceneManager.LoadScene(0);
         basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
-        moneyType.totalMoney = moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
+        moneyType.totalMoney += moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
         moneyType.currentLevel++;   // Eðer finish alanýna gelmiþ ise bir sonraki leveli arttýr
     }
     public void NextLevel()
     {
         //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         //  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
-        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCount)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
+        if (moneyType.currentLevel == SceneManager.sceneCountInBuildSettings)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
         {
             SceneManager.LoadScene(1);  // Oyunun ilk sahnesinin Ýndex deðerini çalýþtýrýr
+            moneyType.currentLevel = 1;
         }
         else
         {
-            SceneManager.LoadScene(moneyType.currentLevel + 1);   // Currentevel+1 diye deðiþtir
+            SceneManager.LoadScene(moneyType.currentLevel);   // Currentevel+1 diye deðiþtir
             //Bir sonraki levele geçer
         }
     }
-
+    public void GameExit()
+    {
+        Application.Quit();
+    }
     public void FruitPriceLevel()
     {
         if (moneyType.totalMoney >= basketType.pricelevelUP)
