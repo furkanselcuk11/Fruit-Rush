@@ -53,3 +53,4 @@ MonoBehaviour:
   currentMoneyTxt: {fileID: 0}
   fruitLevelTxt: {fileID: 0}
   fruitLevelUPTxt: {fileID: 0}
+  levelTxt: {fileID: 0}

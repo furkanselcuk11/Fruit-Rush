@@ -13,12 +13,6 @@ public class GameManager : MonoBehaviour
 
     public bool startGame; // Oyun ba?lad?m?
     [HideInInspector] public bool isFinish; // Level bittimi
-    
-    //[Space]
-    //[Header("Game UI Controller")]
-    //[SerializeField] private GameObject GameStartPanel;
-    //[SerializeField] private GameObject GameRunTimePanel;
-    //[SerializeField] private GameObject GameFinishPanel;
     [Space]
     [Header("Game Controller")]
     [SerializeField] private GameObject Player;
@@ -27,10 +21,6 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Collected Controller")]
     public List<Transform> Collected = new List<Transform>();   // Toplanan objelerin listesi
-    //[Space]
-    //[Header("Score Controller")]
-    //public TextMeshProUGUI totalMoneyTxt;
-    //public TextMeshProUGUI currentMoneyTxt;
 
     private void Awake()
     {
@@ -44,13 +34,9 @@ public class GameManager : MonoBehaviour
         Collected.Add(CollectionBox.transform);    // Player objesini Toplanan Objeler listesine ekler
         basketType.currentFruit = basketType.minFruit;
         moneyType.currentMoney = moneyType.minMoney;
-        
-        //currentMoneyTxt.text = moneyType.currentMoney.ToString();
-        //totalMoneyTxt.text = moneyType.totalMoney.ToString();
     }
     void Update()
     {
-        //UpdateUI();
         UIController.uicontrollerInstance.UpdatePanel();
     }
     private void FixedUpdate()
@@ -74,33 +60,10 @@ public class GameManager : MonoBehaviour
         startGame = true;
         isFinish = false;
     }
-    //void UpdateUI()
-    //{
-    //    //if (startGame & !isFinish)
-    //    //{
-    //    //    GameStartPanel.SetActive(false);
-    //    //    GameRunTimePanel.SetActive(true);
-    //    //    GameFinishPanel.SetActive(false);
-    //    //}
-    //    //else
-    //    //{
-    //    //    GameStartPanel.SetActive(false);
-    //    //    GameRunTimePanel.SetActive(false);
-    //    //    GameFinishPanel.SetActive(true);
-    //    //}
-    //    //if (!startGame & !isFinish)
-    //    //{
-    //    //    GameStartPanel.SetActive(true);
-    //    //    GameRunTimePanel.SetActive(false);
-    //    //    GameFinishPanel.SetActive(true);
-    //    //}
-    //    UIController.uicontrollerInstance.UpdatePanel();
-    //}
 
     public void Add(GameObject collectedObject)
     {
-        // Stack (Toplama) i?lemi yapar
-        
+        // Stack (Toplama) i?lemi yapar        
         collectedObject.transform.parent = null;
         collectedObject.gameObject.AddComponent<Rigidbody>().isKinematic = true;
         collectedObject.gameObject.AddComponent<Stack>(); // Toplanan objeler Stack Componenti eklernir
@@ -111,7 +74,6 @@ public class GameManager : MonoBehaviour
         basketType.currentFruit++;    // Toplanan meyve sayýsýný arttýr
         moneyType.currentMoney += basketType.fruitPrice;    // Oyun içnde toplanan parayý arttýr
         UIController.uicontrollerInstance.UpdateUI();
-        //currentMoneyTxt.text = moneyType.currentMoney.ToString();
     }
     public void Fail(GameObject failGate)
     {
@@ -149,6 +111,7 @@ public class GameManager : MonoBehaviour
     }  
     public void NextLevelBuilding()
     {
+        //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         SceneManager.LoadScene(0);
         basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
         moneyType.totalMoney = moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
@@ -156,6 +119,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
+        //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         //  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
         if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCount)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
         {

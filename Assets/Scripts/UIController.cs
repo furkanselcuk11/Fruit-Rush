@@ -20,6 +20,7 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI currentMoneyTxt;
     public TextMeshProUGUI fruitLevelTxt;
     public TextMeshProUGUI fruitLevelUPTxt;
+    public TextMeshProUGUI levelTxt;
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class UIController : MonoBehaviour
         totalMoneyTxt.text = moneyType.totalMoney.ToString();
         fruitLevelTxt.text = "Lvl " + basketType.priceLevel.ToString();
         fruitLevelUPTxt.text = "UP "+basketType.pricelevelUP.ToString();
+        levelTxt.text = "LEVEL - "+moneyType.currentLevel.ToString();
     }
     public void UpdatePanel()
     {
