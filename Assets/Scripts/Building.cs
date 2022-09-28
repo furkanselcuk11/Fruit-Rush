@@ -8,6 +8,7 @@ public class Building : MonoBehaviour
     [SerializeField] private BuildingSO buildingType = null;    // Scriptable Objects eriþir  
     [SerializeField] private BasketSO basketType = null;    // Scriptable Objects eriþir  
     [SerializeField] private GameObject lockedPlane;
+    [SerializeField] private GameObject shopStand;
     [SerializeField] private TextMeshPro buildingText;
     [SerializeField] private GameObject moneyPrefab;
     [SerializeField] private Transform moneyPos;
@@ -18,11 +19,14 @@ public class Building : MonoBehaviour
         if (buildingType.locked)
         {
             lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.lockedColor;
+            shopStand.SetActive(false);
+            buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();
         }
         else
         {
             lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;
-            
+            shopStand.SetActive(true);
+            buildingText.text = "Open";
             for (int i = 0; i < 10; i++)
             {
                 // moneyPos etrafýnda random para üretir ve binada üretlien paradýn deðeri paraya aktarýlýr
@@ -35,7 +39,7 @@ public class Building : MonoBehaviour
             }            
         }
 
-        buildingText.text = buildingType.currentValue.ToString() + " / " + buildingType.maxValue.ToString();       
+               
         
     }    
     void Update()
@@ -58,6 +62,8 @@ public class Building : MonoBehaviour
                     AudioController.audioControllerInstance.Play("BuildingOpenedSound");
                     buildingType.locked = false;    // Bina kiliti açýlýr
                     lockedPlane.GetComponent<MeshRenderer>().material.color = buildingType.unlockedColor;   // Rengi Yeil olsun
+                    shopStand.SetActive(true);
+                    buildingText.text = "Open";
                 }
             }
             else

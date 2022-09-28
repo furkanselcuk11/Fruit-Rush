@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameExit()
     {
+        //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         Application.Quit();
     }
     public void FruitPriceLevel()
@@ -141,7 +142,7 @@ public class GameManager : MonoBehaviour
         if (moneyType.totalMoney >= basketType.pricelevelUP)
         {
             moneyType.totalMoney -= basketType.pricelevelUP;
-            basketType.fruitPrice = basketType.fruitPrice * 2;            
+            basketType.fruitPrice +=10;            
             basketType.pricelevelUP = basketType.pricelevelUP * 2;
             basketType.priceLevel++;
             
