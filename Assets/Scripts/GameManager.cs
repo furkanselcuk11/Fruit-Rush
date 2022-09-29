@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     public void StartTheGame()
     {
         startGame = true;
-        isFinish = false;
+        isFinish = false;        
     }
 
     public void Add(GameObject collectedObject)
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
     public void NextLevelBuilding()
     {
         //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         basketType.totalFruit = basketType.currentFruit;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
         moneyType.totalMoney += moneyType.currentMoney;    // Levelde toplanan meyve sayýlarýný toplam meyve sayýsýna eþitler
         moneyType.currentLevel++;   // Eðer finish alanýna gelmiþ ise bir sonraki leveli arttýr
@@ -121,21 +121,18 @@ public class GameManager : MonoBehaviour
     {
         //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         //  Level bittikten sonra bir sonraki level geçmek için butona basýldýðý an çalýþan fonksiyon
-        if (moneyType.currentLevel == SceneManager.sceneCountInBuildSettings)  // Son seviye kaçsa (index deðerine göre 2) son seviye gelince ilk levele geri döner
-        {
-            SceneManager.LoadScene(1);  // Oyunun ilk sahnesinin Ýndex deðerini çalýþtýrýr
-            moneyType.currentLevel = 1;
-        }
-        else
-        {
-            SceneManager.LoadScene(moneyType.currentLevel);   // Currentevel+1 diye deðiþtir
-            //Bir sonraki levele geçer
-        }
+        SceneManager.LoadScene(RandomLevel());
     }
     public void GameExit()
     {
         //SaveManager.saveManagerInstance.SaveGame(); // Verileri Kaydet
         Application.Quit();
+    }
+    private int RandomLevel()
+    {
+        // Random level dönderir
+        int randomlevel =Random.Range(2,12); 
+        return randomlevel;
     }
     public void FruitPriceLevel()
     {

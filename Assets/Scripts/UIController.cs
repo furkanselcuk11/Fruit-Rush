@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -45,7 +46,8 @@ public class UIController : MonoBehaviour
         totalMoneyTxt.text = moneyType.totalMoney.ToString();
         fruitLevelTxt.text = "Lvl " + basketType.priceLevel.ToString();
         fruitLevelUPTxt.text = "UP "+basketType.pricelevelUP.ToString();
-        levelTxt.text = "LEVEL - "+moneyType.currentLevel.ToString();
+        //levelTxt.text = "LEVEL - "+moneyType.currentLevel.ToString();
+        levelTxt.text = "LEVEL - "+ moneyType.currentLevel.ToString();
     }
     public void UpdatePanel()
     {
