@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
     private int RandomLevel()
     {
         // Random level dönderir
-        int randomlevel =Random.Range(2,12); 
+        int randomlevel = Random.Range(2, SceneManager.sceneCountInBuildSettings);
         return randomlevel;
     }
     public void FruitPriceLevel()

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MoneyData
   m_EditorClassIdentifier: 
   _totalMoney: 0
-  _currentMoney: 3
+  _currentMoney: 0
   _minMoney: 0
   _currentLevel: 1
