@@ -79,5 +79,17 @@ public class JoystickController : MonoBehaviour
             UIController.uicontrollerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
             Destroy(other.gameObject);
         }
+        if (other.CompareTag("Market"))
+        {
+            // Eğer temas edilen obje market ise elindeki tüm meyveleri sat
+            Debug.Log("Market");
+            if (basketType.totalFruit > 0)
+            {
+                // Eğer sepetinde 1 ve 1 den fazla meyve var ise
+                moneyType.totalMoney += basketType.totalFruit;    // Sepetteki meyve kadar para ekler
+                basketType.totalFruit = 0;
+                UIController.uicontrollerInstance.totalMoneyTxt.text = moneyType.totalMoney.ToString();
+            }
+        }
     }
 }

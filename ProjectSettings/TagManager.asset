@@ -8,6 +8,7 @@ TagManager:
   - Fail
   - Collected
   - Money
+  - Market
   layers:
   - Default
   - TransparentFX
