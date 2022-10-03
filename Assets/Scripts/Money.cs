@@ -5,7 +5,7 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     [SerializeField] float turnSpeed = 100f;    // Obejelerin dönme hýzý
-    public float value = 1;
+    public int value = 1;
     void Start()
     {
         

@@ -5,22 +5,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Money Type", menuName = "MoneySO")]
 public class MoneySO : ScriptableObject
 {    
-    [SerializeField] private float _totalMoney;
-    [SerializeField] private float _currentMoney;
-    [SerializeField] private float _minMoney;
+    [SerializeField] private int _totalMoney;
+    [SerializeField] private int _currentMoney;
+    [SerializeField] private int _minMoney;
     [SerializeField] private int _currentLevel=1;
         
-    public float totalMoney
+    public int totalMoney
     {
         get { return _totalMoney; }
         set { _totalMoney = value; }
     }
-    public float currentMoney
+    public int currentMoney
     {
         get { return _currentMoney; }
         set { _currentMoney = value; }
     }
-    public float minMoney
+    public int minMoney
     {
         get { return _minMoney; }
         set { _minMoney = value; }

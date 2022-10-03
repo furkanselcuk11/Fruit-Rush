@@ -138,10 +138,10 @@ public class GameManager : MonoBehaviour
     {
         if (moneyType.totalMoney >= basketType.pricelevelUP)
         {
-            moneyType.totalMoney -= basketType.pricelevelUP;
-            basketType.fruitPrice +=10;            
-            basketType.pricelevelUP = basketType.pricelevelUP * 2;
-            basketType.priceLevel++;
+            moneyType.totalMoney -= basketType.pricelevelUP;    // Toplam paradan - Meyve level arttýrma fiyatý kadar azalt
+            basketType.fruitPrice += 2;  //+=10 Meyve toplama fiyatýný arttýr          
+            basketType.pricelevelUP += 500;  // basketType.pricelevelUP * 2 Meyve level arttýrma fiyatýný arttýr
+            basketType.priceLevel++;    // Meyve levelini arttýr
             
             UIController.uicontrollerInstance.UpdateUI();
         }

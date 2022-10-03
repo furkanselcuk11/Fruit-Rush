@@ -8,7 +8,7 @@ public class BuildingSO : ScriptableObject
 {
     [SerializeField] private int _currentValue; // Toplanan meyve sayýsý
     [SerializeField] private int _maxValue; // Max toplanmasý gereken meyve sayýsý
-    [SerializeField] private float _moneyMaking;  // Para üretme miktarý
+    [SerializeField] private int _moneyMaking;  // Para üretme miktarý
     [SerializeField] private bool _locked=true;
     [SerializeField] private Color _lockedColor = Color.red;
     [SerializeField] private Color _unlockedColor = Color.green;
@@ -23,7 +23,7 @@ public class BuildingSO : ScriptableObject
         get { return _maxValue; }
         set { _maxValue = value; }
     }
-    public float monkeyMaking
+    public int monkeyMaking
     {
         get { return _moneyMaking; }
         set { _moneyMaking = value; }
